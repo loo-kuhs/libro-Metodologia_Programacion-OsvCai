@@ -18,7 +18,7 @@ const operacionesBasicas = (n1, n2, ope) => {
       return (resultado = n1 * n2);
       break;
     default:
-      throw new Error(`Esa operacion no es permitida en el programa`);
+      throw new Error(`Esa operación no es permitida en el programa`);
       break;
   }
 };

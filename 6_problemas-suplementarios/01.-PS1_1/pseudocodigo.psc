@@ -7,7 +7,7 @@ Funcion resultado <- operacionesBasicas (n1, n2, ope)
 		'multiplicar':
 			resultado <- n1*n2
 		De Otro Modo:
-			Escribir 'Esa operacion no es permitida en el programa'
+			Escribir 'Esa operación no es permitida en el programa'
 	FinSegun
 FinFuncion
 
@@ -16,7 +16,7 @@ Algoritmo PS1_1
 	Leer num1
 	Escribir 'Ingrese el segundo numero real'
 	Leer num2
-	Escribir 'Que operacion hacer: multiplicar. sumar, restar'
+	Escribir 'Que operación hacer: multiplicar. sumar, restar'
 	Leer operacion
-	Escribir 'Resultado: ',operacionesBasicas(num1,num2,operacion)
+	Escribir 'Resultado: ',operacionesBasicas(num1, num2, operacion)
 FinAlgoritmo
