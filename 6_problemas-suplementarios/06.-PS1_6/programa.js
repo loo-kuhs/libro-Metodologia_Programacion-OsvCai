@@ -35,5 +35,5 @@ const importeYMensualidad = (monto) => {
   }
 };
 
-let montoTotalVehiculo = 100000;
-importeYMensualidad(montoTotalVehiculo);
+let montoVehiculo = 100000;
+importeYMensualidad(montoVehiculo);

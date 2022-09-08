@@ -15,6 +15,6 @@ FinFuncion
 
 Algoritmo PS1_6
 	Escribir 'Ingrese el monto total del vehiculo'
-	Leer montoTotalVehiculo
-	importeYMensualidad(montoTotalVehiculo)
+	Leer montoVehiculo
+	importeYMensualidad(montoVehiculo)
 FinAlgoritmo
