@@ -7,18 +7,24 @@
  */
 
 const calculadoraEsfera = (radio) => {
+  if (radio === 0 || typeof radio !== "number")
+    throw new Error(`Error. Ingrese datos correctos: ${radioEsfera}`).message;
+
   let area = 4 * Math.PI * Math.pow(radio, 2),
     volumen = (4 / 3) * (Math.PI * Math.pow(radio, 3));
 
-  console.log(`Radio de la esfera: ${radio}`);
-  console.log(`La esfera tiene un area de: ${area.toFixed(2)}`);
-  console.log(`La esfera tiene un volumen de: ${volumen.toFixed(2)}`);
+  let datosEsfera = {
+    radio,
+    area,
+    volumen,
+  };
+
+  return datosEsfera;
 };
 
 let radioEsfera = 35;
+let resultado = calculadoraEsfera(radioEsfera);
 
-if (radioEsfera === 0) {
-  throw new Error(`Error. Ingrese datos correctos: ${radioEsfera}`);
-} else {
-  calculadoraEsfera(radioEsfera);
-}
+console.log(`Radio de la esfera: ${resultado.radio}`);
+console.log(`La esfera tiene un area de: ${resultado.area.toFixed(2)}`);
+console.log(`La esfera tiene un volumen de: ${resultado.volumen.toFixed(2)}`);
