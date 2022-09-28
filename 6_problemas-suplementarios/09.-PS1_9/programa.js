@@ -8,7 +8,7 @@
 
 const calculadoraEsfera = (radio) => {
   if (radio === 0 || typeof radio !== "number")
-    throw new Error(`Error. Ingrese datos correctos: ${radioEsfera}`).message;
+    throw new Error(`Error. Ingrese datos correctos: ${radio}`).message;
 
   let area = 4 * Math.PI * Math.pow(radio, 2),
     volumen = (4 / 3) * (Math.PI * Math.pow(radio, 3));
