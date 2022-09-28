@@ -8,7 +8,7 @@
 
 const calculadoraHexaedro = (lado) => {
   if (lado === 0 || typeof lado !== "number")
-    throw new Error(`Error. Ingrese datos correctos: ${typeof lado}`).message;
+    throw new Error(`Error. Ingrese datos correctos: ${lado}`).message;
 
   let areaBase = Math.pow(lado, 2),
     areaLateral = 4 * Math.pow(lado, 2),
