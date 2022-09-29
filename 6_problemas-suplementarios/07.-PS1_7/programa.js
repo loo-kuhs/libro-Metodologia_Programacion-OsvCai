@@ -12,25 +12,28 @@
  */
 
 const importeYMensualidades = (monto, enganche, interes, meses) => {
-  if (monto === 0 || meses === 0) {
+  if (monto === 0 || meses === 0)
     throw new Error(
       `Error. Ingrese datos correctos. Monto: ${monto}, Meses: ${meses}.`
-    );
-  } else {
-    let interesGlob = interes / 100;
-    enganche = (enganche * monto) / 100;
+    ).message;
 
-    let mensualidades = monto - enganche;
-    let mensualidadesConInteres = mensualidades * (1 + interesGlob);
-    let mensualidad = mensualidadesConInteres / meses;
+  let interesGlob = interes / 100;
+  enganche = (enganche * monto) / 100;
 
-    console.log(`Monto del vehículo: $${monto}`);
-    console.log(`Enganche del vehículo: $${enganche}`);
-    console.log(
-      `Total a pagar a ${meses} meses con interes global del ${interes}%: $${mensualidadesConInteres.toFixed(2)}`
-    );
-    console.log(`Cada mes se deberá pagar: ${mensualidad.toFixed(2)}`);
+  let mensualidades = monto - enganche;
+  let mensualidadesConInteres = mensualidades * (1 + interesGlob);
+  let mensualidad = mensualidadesConInteres / meses;
+
+  let respuestaImporteYMensualidades = {
+    monto,
+    enganche,
+    meses,
+    interes,
+    mensualidadesConInteres,
+    mensualidad
   }
+  
+  return respuestaImporteYMensualidades;
 };
 
 let montoVehiculo = 929400,
@@ -38,4 +41,18 @@ let montoVehiculo = 929400,
   interesGlobal = 12,
   mesesTotales = 36;
 
-importeYMensualidades(montoVehiculo, engancheVehiculo, interesGlobal, mesesTotales);
+let respuesta = importeYMensualidades(
+  montoVehiculo,
+  engancheVehiculo,
+  interesGlobal,
+  mesesTotales
+);
+
+console.log(`Monto del vehículo: $${respuesta.monto}`);
+console.log(`Enganche del vehículo: $${respuesta.enganche}`);
+console.log(
+  `Total a pagar a ${respuesta.meses} meses con interes global del ${respuesta.interes}%: $${respuesta.mensualidadesConInteres.toFixed(
+    2
+  )}`
+);
+console.log(`Cada mes se deberá pagar: ${respuesta.mensualidad.toFixed(2)}`);
