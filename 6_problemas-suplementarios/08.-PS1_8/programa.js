@@ -13,12 +13,12 @@
  */
 
 const calculadoraCono = (radio, altura) => {
-  if (radioCono === 0 || alturaCono === 0)
+  if (radio === 0 || altura === 0)
     throw new Error(
-      `Error. Ingresa datos correctos. Radio ${radioCono} O Altura ${alturaCono}`
+      `Error. Ingresa datos correctos. Radio ${radio} O Altura ${altura}`
     );
 
-  let generatriz = Math.sqrt(Math.pow(alturaCono, 2) + Math.pow(radioCono, 2));
+  let generatriz = Math.sqrt(Math.pow(altura, 2) + Math.pow(radio, 2));
   let areaBase = Math.PI * Math.pow(radio, 2),
     areaLateral = Math.PI * radio * generatriz,
     areaTotal = areaBase + areaLateral,
