@@ -21,19 +21,21 @@ const importeYMensualidad = (monto) => {
     let mensualidad = monto - enganche,
       mesSinIntereses = mensualidad / 18;
 
-    console.log(
-      `El costo del coche es: $${monto}`
-      );
-    console.log(
-      `El enganche del 35% sería: $${enganche}`
-      );
-    console.log(
-      `El resto a 18 meses sin intereses sería: $${mensualidad}`
-      );
-    console.log(
-      `Cada mes se deberá pagar: $${mesSinIntereses.toFixed(2)}`)
+    let respuesta = {
+      monto,
+      enganche,
+      mensualidad,
+      mesSinIntereses,
+    };
+
+    return respuesta;
   }
 };
 
 let montoVehiculo = 100000;
-importeYMensualidad(montoVehiculo);
+let respuesta = importeYMensualidad(montoVehiculo);
+
+console.log(`El costo del coche es: $${respuesta.monto}`);
+console.log(`El enganche del 35% sería: $${respuesta.enganche}`);
+console.log(`El resto a 18 meses sin intereses sería: $${respuesta.mensualidad}`);
+console.log(`Cada mes se deberá pagar: $${respuesta.mesSinIntereses.toFixed(2)}`);
