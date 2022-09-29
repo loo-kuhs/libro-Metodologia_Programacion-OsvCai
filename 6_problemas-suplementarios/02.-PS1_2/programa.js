@@ -10,11 +10,19 @@ const circulo = (radio) => {
   let areaCirculo = Math.PI * Math.pow(radio, 2);
   let circunferenciaCirculo = 2 * Math.PI * radio;
 
-  console.log(
-    `El radio del circulo es: ${radio}, 
-      su area es: ${areaCirculo.toFixed(3)}, 
-      su circunferencia es: ${circunferenciaCirculo.toFixed(3)}.`
-  );
+  let datosCirculo = {
+    radio,
+    areaCirculo,
+    circunferenciaCirculo,
+  };
+
+  return datosCirculo;
 };
 
-circulo(2);
+let resultado = circulo(2);
+
+console.log(
+  `El radio del circulo es: ${resultado.radio}, 
+      su area es: ${resultado.areaCirculo.toFixed(3)}, 
+      su circunferencia es: ${resultado.circunferenciaCirculo.toFixed(3)}.`
+);
