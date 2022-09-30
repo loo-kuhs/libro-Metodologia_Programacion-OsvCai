@@ -9,7 +9,7 @@
 const calculadoraPrismaPentagonal = (perimetro, apotema, altura) => {
   if (perimetro === 0 || apotema === 0 || altura === 0)
     throw new Error(
-      `Error en alguno de los siguientes datos, perímetro: ${perimetro} o ${apotema} o ${altura}`
+      `Error en alguno de los siguientes datos, perímetro: ${perimetro} o apotema: ${apotema} o altura: ${altura}`
     ).message;
 
   let areaBase = (perimetro * apotema) / 2,
